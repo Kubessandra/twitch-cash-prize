@@ -42,6 +42,7 @@ const CashPrize = (props: CashPrizeProps): JSX.Element => {
     cashPrize,
     className = '',
   } = props;
+
   useEffect(() => {
     log.debug('[Mount] CashPrize');
   }, []);
