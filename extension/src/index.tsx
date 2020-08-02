@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import log from 'loglevel';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+log.enableAll();
 
 ReactDOM.render(
   <React.StrictMode>
