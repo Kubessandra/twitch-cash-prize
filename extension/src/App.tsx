@@ -2,12 +2,14 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import CashPrize from 'components/CashPrize';
 import Layout from 'components/Layout';
+import ParticipationPart from 'components/ParticipationPart';
 import defaultTheme from './theme';
 
 const StyledApp = styled.div`
   margin: 2em;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
 `;
 
@@ -20,6 +22,7 @@ const App = (): JSX.Element => (
     <Layout>
       <StyledApp>
         <StyledCashPrize cashPrize={2090} />
+        <ParticipationPart />
       </StyledApp>
     </Layout>
   </ThemeProvider>

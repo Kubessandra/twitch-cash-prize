@@ -8,11 +8,13 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0.5em;
 `;
 
 const Box = styled.div`
   border: solid 1px;
   border-radius: 500px;
+  border-color: ${({ theme }): string => theme.colors.secondary};
   padding: 0.5em;
   display: flex;
   align-items: center;
@@ -26,6 +28,7 @@ const Icon = styled.img`
 `;
 
 const Gain = styled.span`
+  color: ${({ theme }): string => theme.text.secondary};
   margin-right: 1em;
 `;
 
