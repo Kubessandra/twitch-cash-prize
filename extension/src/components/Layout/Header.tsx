@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   min-height: 30px;
-  background-color: ${({ theme }): string => theme.colors.main};
+  background-color: ${({ theme }): string => theme.colors.secondary};
   text-align: center;
   display: flex;
   align-items: center;
@@ -12,7 +12,7 @@ const Container = styled.div`
 `;
 
 const Text = styled.h1`
-  color: ${({ theme }): string => theme.text.secondary};
+  color: ${({ theme }): string => theme.text.main};
   display: flex;
 `;
 
