@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-  min-height: 100px;
+  min-height: 75px;
   background-color: ${({ theme }): string => theme.colors.main};
   text-align: center;
   position: relative;
