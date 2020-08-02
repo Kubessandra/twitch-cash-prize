@@ -12,12 +12,12 @@ const Container = styled.div`
 
 const Box = styled.div`
   border: solid 1px;
-  border-radius: 30px;
+  border-radius: 500px;
   padding: 0.5em;
-  flex-grow: 0;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  box-shadow: ${({ theme }): string => theme.shadow};
 `;
 
 const Icon = styled.img`
@@ -29,24 +29,22 @@ const Gain = styled.span`
   margin-right: 1em;
 `;
 
-const Label = styled.h3`
-`;
-
-interface CashPrizeProps {
+export interface CashPrizeProps {
   cashPrize: number;
+  className?: string;
 }
 
 const CashPrize = (props: CashPrizeProps): JSX.Element => {
-  const { cashPrize } = props;
+  const {
+    cashPrize,
+    className = '',
+  } = props;
   useEffect(() => {
     log.debug('[Mount] CashPrize');
   }, []);
 
   return (
-    <Container>
-      <Label>
-        Cash Prize
-      </Label>
+    <Container className={className}>
       <Box>
         <Icon src={CashPNG} alt="cashIcon" />
         <Gain>

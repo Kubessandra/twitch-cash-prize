@@ -5,17 +5,21 @@ import Layout from 'components/Layout';
 import defaultTheme from './theme';
 
 const StyledApp = styled.div`
-  min-height: 300px;
-  height: 200px;
-  min-width: 100px;
   margin: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const StyledCashPrize = styled(CashPrize)`
+  font-size: 25px;
 `;
 
 const App = (): JSX.Element => (
   <ThemeProvider theme={defaultTheme}>
     <Layout>
       <StyledApp>
-        <CashPrize cashPrize={2090} />
+        <StyledCashPrize cashPrize={2090} />
       </StyledApp>
     </Layout>
   </ThemeProvider>

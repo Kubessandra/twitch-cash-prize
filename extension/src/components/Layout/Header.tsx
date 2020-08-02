@@ -8,9 +8,10 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: ${({ theme }): string => theme.shadow};
 `;
 
-const Text = styled.h2`
+const Text = styled.h1`
   color: ${({ theme }): string => theme.text.secondary};
   display: flex;
 `;

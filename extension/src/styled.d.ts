@@ -9,6 +9,7 @@ declare module 'styled-components' {
     text: {
       main: string
       secondary: string
-    }
+    },
+    shadow: string,
   }
 }
