@@ -3,6 +3,7 @@ import styled, { ThemeProvider } from 'styled-components';
 import CashPrize from 'components/CashPrize';
 import Layout from 'components/Layout';
 import ParticipationPart from 'components/ParticipationPart';
+import UserAuthProvider from 'providers/UserAuth';
 import defaultTheme from './theme';
 
 const StyledApp = styled.div`
@@ -20,10 +21,12 @@ const StyledCashPrize = styled(CashPrize)`
 const App = (): JSX.Element => (
   <ThemeProvider theme={defaultTheme}>
     <Layout>
-      <StyledApp>
-        <StyledCashPrize cashPrize={2090} />
-        <ParticipationPart />
-      </StyledApp>
+      <UserAuthProvider>
+        <StyledApp>
+          <StyledCashPrize cashPrize={2090} />
+          <ParticipationPart />
+        </StyledApp>
+      </UserAuthProvider>
     </Layout>
   </ThemeProvider>
 );

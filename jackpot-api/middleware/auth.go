@@ -3,14 +3,18 @@ package middleware
 import (
 	"jackpot-api/config"
 
+	b64 "encoding/base64"
+
 	"github.com/gofiber/fiber"
 	jwtware "github.com/gofiber/jwt"
 )
 
 //Protected set a route to protected
 func Protected() func(ctx *fiber.Ctx) {
+	secret := config.Config("SECRET")
+	decodedSecret, _ := b64.StdEncoding.DecodeString(secret)
 	return jwtware.New(jwtware.Config{
-		SigningKey:   []byte(config.Config("SECRET")),
+		SigningKey:   decodedSecret,
 		ErrorHandler: jwtError,
 	})
 }
